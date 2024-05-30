@@ -665,6 +665,50 @@ except ImportError:
     pass
 
 
+# reluqp
+# ========
+
+reluqp_solve_qp: Optional[
+    Callable[
+        [
+            ndarray,
+            ndarray,
+            Optional[ndarray],
+            Optional[ndarray],
+            Optional[ndarray],
+            Optional[ndarray],
+            Optional[ndarray],
+            Optional[ndarray],
+            Optional[ndarray],
+            bool,
+        ],
+        Optional[ndarray],
+    ]
+] = None
+
+reluqp_solve_problem: Optional[
+    Callable[
+        [
+            Problem,
+            Optional[ndarray],
+            bool,
+        ],
+        Solution,
+    ]
+] = None
+
+try:
+    from .reluqp_ import reluqp_solve_problem, reluqp_solve_qp
+
+    solve_function["reluqp"] = reluqp_solve_problem
+    available_solvers.append("reluqp")
+    dense_solvers.append("reluqp")
+except ImportError:
+    import importlib.util
+    if importlib.util.find_spec("torch") is None:
+        raise ImportError('Torch must be installed in order to use the ReLUQP solver')
+
+
 # SCS
 # ========
 
@@ -733,6 +777,7 @@ __all__ = [
     "qpoases_solve_qp",
     "qpswift_solve_qp",
     "quadprog_solve_qp",
+    "reluqp_solve_qp",
     "scs_solve_qp",
     "solve_function",
     "sparse_solvers",

@@ -95,6 +95,7 @@ conda install -c conda-forge qpsolvers
 | [qpOASES](https://github.com/coin-or/qpOASES) | ``qpoases`` | Active set | Dense | LGPL-2.1 | ➖ |
 | [qpSWIFT](https://github.com/qpSWIFT/qpSWIFT) | ``qpswift`` | Interior point | Sparse | GPL-3.0 | ✖️ |
 | [quadprog](https://github.com/quadprog/quadprog) | ``quadprog`` | Active set | Dense | GPL-2.0 | ✖️ |
+| [ReLUQP](https://github.com/RoboticExplorationLab/ReLUQP-py.git) | ``reluqp`` | Alternating Direction Method of Multipliers | Dense | MIT | ✔️ |
 | [SCS](https://www.cvxgrp.org/scs/) | ``scs`` | Augmented Lagrangian | Sparse | MIT | ✔️ |
 
 Matrix arguments are NumPy arrays for dense solvers and SciPy Compressed Sparse Column (CSC) matrices for sparse ones.
