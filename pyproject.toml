@@ -45,8 +45,9 @@ piqp = ["piqp >=0.2.2"]
 proxqp = ["proxsuite >=0.2.9"]
 qpalm = ["qpalm >=1.2.1"]
 quadprog = ["quadprog >=0.1.11"]
+reluqp = ["torch >= 1.13.1", "git+https://github.com/RoboticExplorationLab/ReLUQP-py.git@349a190645e09ab3e2e86693fb73f053262ab25b"]
 scs = ["scs >=3.2.0"]
-open_source_solvers = ["qpsolvers[clarabel,cvxopt,daqp,ecos,highs,osqp,piqp,proxqp,qpalm,quadprog,scs]"]
+open_source_solvers = ["qpsolvers[clarabel,cvxopt,daqp,ecos,highs,osqp,piqp,proxqp,qpalm,quadprog,reluqp,scs]"]
 
 # Wheels-only solvers should distribute wheels that work on:
 # - macOS (aarch64)

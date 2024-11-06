@@ -37,6 +37,7 @@ from .solvers import (
     qpoases_solve_qp,
     qpswift_solve_qp,
     quadprog_solve_qp,
+    reluqp_solve_qp,
     scs_solve_qp,
     sparse_solvers,
 )
@@ -74,6 +75,7 @@ __all__ = [
     "qpoases_solve_qp",
     "qpswift_solve_qp",
     "quadprog_solve_qp",
+    "reluqp_solve_qp",
     "scs_solve_qp",
     "solve_ls",
     "solve_problem",
